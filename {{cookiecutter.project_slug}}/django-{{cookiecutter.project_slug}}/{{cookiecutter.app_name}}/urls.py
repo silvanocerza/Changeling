@@ -2,18 +2,18 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 
-{{if cookiecutter.use_django_rest_framework == "y"}}
+{% if cookiecutter.use_django_rest_framework == "y" %}
 apipatterns = [
     url(r'', include('api.urls')),
 ]
-{{endif}}
+{% endif %}
 
 urlpatterns = [
-{{id cookiecutter.add_frontend == "y"}}
+{% id cookiecutter.add_frontend == "y" %}
     url(r'', include('frontend.urls')),
-{{endif}}
-{{if cookiecutter.use_django_rest_framework == "y"}}
+{% endif %}
+{% if cookiecutter.use_django_rest_framework == "y" %}
     url(r'^api/', include(apipatterns, namespace='api')),
-{{endif}}
+{% endif %}
     url(r'^admin/', admin.site.urls),
 ]
