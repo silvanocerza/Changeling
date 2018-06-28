@@ -1,0 +1,13 @@
+{
+  "project_name": "World Conquest Project",
+  "project_slug": "world-conquest",
+  "project_description": "The plan to conquer the whole world",
+  "author_name": "Silvano Cerza",
+  "license": [
+    "MIT",
+    "BSD",
+    "GPLv3"
+  ],
+  "use_django_rest_framework": "n",
+  "add_frontend": "n"
+}

@@ -1,0 +1,6 @@
+[run]
+source = django-{{cookiecutter.project_slug}}
+omit =
+    */migrations/*
+    */tests/*
+

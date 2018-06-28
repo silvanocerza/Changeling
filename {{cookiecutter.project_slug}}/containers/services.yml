@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  postgres:
+    extends:
+      file: base.yml
+      service: postgres
+    ports:
+      - "5432:5432"
+

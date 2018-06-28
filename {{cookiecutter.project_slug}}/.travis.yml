@@ -1,0 +1,33 @@
+# Config file for automatic testing at travis-ci.org
+
+language: python
+python: "3.6"
+
+# Set to true to enable docker daemon
+sudo: true
+
+env:
+  global:
+    - DATABASE_URL="postgres://postgres@127.0.0.1:5432/{{cookiecutter.project_slug}}"
+  matrix:
+    - PSQL_VERSION=9.6.3
+
+services:
+  - docker
+
+# Launches postgres containers necessary for testing
+before_install:
+  - sudo /etc/init.d/postgresql stop
+  - docker pull postgres:$PSQL_VERSION
+  - docker run -d -p 127.0.0.1:5432:5432 postgres:$PSQL_VERSION
+
+# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+install:
+  - pip install tox
+
+# command to run tests, e.g. python setup.py test
+script: tox -r
+
+after_success:
+  - pip install coveralls
+  - coveralls

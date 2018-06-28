@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+pytest = "*"
+pytest-django = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+coverage = "*"
+ipdb = "*"
+factory-boy = "*"
+"flake8" = "*"
+
+[packages]
+django = "*"
+dj-database-url = "*"
+"psycopg2" = "*"
+uwsgi = "*"
+
+[requires]
+python_version = "3.6"
+

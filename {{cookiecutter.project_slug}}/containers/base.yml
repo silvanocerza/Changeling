@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+    postgres:
+        image: postgres:9.6.3
+        environment:
+            - POSTGRES_USER=devel
+            - POSTGRES_PASSWORD=123456
+            - POSTGRES_DB={{cookiecutter.project_slug}}
+
+    django:
+        build:
+            context: ../
+            dockerfile: containers/Dockerfile
+        volumes:
+            - ..:/app
+        ports:
+            - "8000:8000"
+
+

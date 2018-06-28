@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{cookiecutter.project_name}}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
+  </head>
+  <body>
+    {% block content %}
+
+    {% endblock content %}
+
+    <script src="{% static 'js/bundle.js' %}"></script>
+  </body>
+</html>
