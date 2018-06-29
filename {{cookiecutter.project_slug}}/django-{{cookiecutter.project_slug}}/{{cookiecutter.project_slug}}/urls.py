@@ -9,7 +9,7 @@ apipatterns = [
 {% endif %}
 
 urlpatterns = [
-{% id cookiecutter.add_frontend == "y" %}
+{% if cookiecutter.add_frontend == "y" %}
     url(r'', include('frontend.urls')),
 {% endif %}
 {% if cookiecutter.use_django_rest_framework == "y" %}
