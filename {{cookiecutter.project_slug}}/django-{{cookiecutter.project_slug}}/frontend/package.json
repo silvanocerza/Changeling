@@ -1,0 +1,48 @@
+{
+    "name": "{{ cookiecutter.project_slug }}",
+    "version": "0.0.1",
+    "description": "{{ cookiecutter.project_name }} frontend",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest --coverage"
+    },
+    "authors": [
+      "{{ cookiecutter.author_name }}"
+    ],
+    "license": "{{ cookiecutter.license }}",
+    "jest": {
+      "moduleFileExtensions": [
+        "js"
+      ],
+      "moduleNameMapper": {
+        "^.+\\.(css|scss)$": "identity-obj-proxy"
+      },
+      "testPathIgnorePatterns": [
+        "<rootDir>/node_modules/"
+      ]
+    },
+    "dependencies": {
+      "babel-polyfill": "6.26.0",
+    },
+    "devDependencies": {
+      "babel-core": "6.26.0",
+      "babel-jest": "22.0.4",
+      "babel-loader": "7.1.2",
+      "babel-preset-env": "1.6.1",
+      "css-loader": "0.28.7",
+      "eslint": "4.11.0",
+      "eslint-config-airbnb-base": "12.1.0",
+      "eslint-loader": "1.9.0",
+      "eslint-plugin-import": "2.8.0",
+      "extract-text-webpack-plugin": "3.0.2",
+      "identity-obj-proxy": "3.0.0",
+      "jest": "21.2.1",
+      "jest-fetch-mock": "1.4.0",
+      "node-sass": "4.6.0",
+      "sass-loader": "6.0.6",
+      "style-loader": "0.19.0",
+      "uglifyjs-webpack-plugin": "1.0.1",
+      "webpack": "3.8.1"
+    }
+  }
+  
