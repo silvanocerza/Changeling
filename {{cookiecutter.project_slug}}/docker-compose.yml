@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    postgres:
+        extends:
+            file: ./containers/base.yml
+            service: postgres
+
+    django:
+        extends:
+            file: ./containers/base.yml
+            service: django
