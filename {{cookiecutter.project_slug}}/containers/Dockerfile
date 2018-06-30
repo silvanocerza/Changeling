@@ -2,6 +2,7 @@ FROM python:3.6
 
 ARG DJANGO_ENV=production
 
+ENV DJANGO_ENV=${DJANGO_ENV}
 ENV DJANGO_SETTINGS_MODULE {{cookiecutter.project_slug}}.settings.dev
 ENV DATABASE_URL postgres://devel:123456@postgres:5432/{{cookiecutter.project_slug}}
 
