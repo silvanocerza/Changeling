@@ -70,4 +70,5 @@ node_modules/
 
 # Visual Studio Code
 *.code-workspace
+.vscode
 
