@@ -2,9 +2,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 {% if cookiecutter.use_django_rest_framework == "y" %}
-apipatterns = [
+apipatterns = ([
     url(r'', include('api.urls')),
-]
+], 'api')
 {% endif %}
 urlpatterns = [
     {% if cookiecutter.add_frontend == "y" %}url(r'', include('frontend.urls')),{% endif %}
