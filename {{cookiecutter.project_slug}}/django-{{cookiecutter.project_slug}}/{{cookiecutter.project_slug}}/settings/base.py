@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    {% if cookiecutter.use_django_rest_framework == "y" %}'rest_framework',{% endif %}
 ]
 
 MIDDLEWARE = [
