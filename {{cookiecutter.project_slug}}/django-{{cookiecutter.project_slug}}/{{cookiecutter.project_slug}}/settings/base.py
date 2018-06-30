@@ -16,9 +16,7 @@ ALLOWED_HOSTS = env('DJANGO_ALLOWED_HOSTS', '').replace(' ', '').split(',')
 # Application definition
 
 INSTALLED_APPS = [
-{% if cookiecutter.add_frontend == "y" %}
-    'frontend',
-{% endif %}
+    {% if cookiecutter.add_frontend == "y" %}'frontend',{% endif %}
 
     'django.contrib.admin',
     'django.contrib.auth',

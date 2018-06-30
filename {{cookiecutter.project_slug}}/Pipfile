@@ -19,9 +19,7 @@ dj-database-url = "*"
 "psycopg2" = "*"
 uwsgi = "*"
 django-getenv = "*"
-{% if cookiecutter.use_django_rest_framework == "y" %}
-djangorestframework = "*"
-{% endif %}
+{% if cookiecutter.use_django_rest_framework == "y" %}djangorestframework = "*"{% endif %}
 
 [requires]
 python_version = "3.6"
